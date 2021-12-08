@@ -14,7 +14,10 @@ Ted Nelson has patented and trademarked ZigZag&reg; for development of his zippe
   and views so that you can see what you're doing.
 
 ## What is dZeZ?  
-- dZeZ aims to be an open source conceptual data structure that represent graph data structures using technologies available on the decentralized web.  While it will take advantage of features of a specific protocol (hypercore protocol and its derivatives), the concept is intended to be a protocol-agnostic abstraction layer that can wrap any decentralized data technology that conforms to a dZeZ interface.
+- dZeZ aims to be an open source conceptual data structure that represents graph data structures using technologies available on the decentralized web.  zzstructure is a special case of a graph that imposes a restriction (known as "Restriction R") on how cells may be connected ( see https://eprints.soton.ac.uk/259230/1/mSpace_zzStructures.pdf  )
+- A graph contained in a dZeZ data structure may be validated to verify compliance with restriction 
+- Tools for building dZeZ data structures may choose to enforce Restriction R to ensure that mutations of the graph always comply with Restriction R, and can take advantage of features specific to zzstructures.
+-  While dZeZ will initially take advantage of features of a specific dWeb protocol (hypercore protocol and its derivatives), the concept is intended to be a protocol-agnostic abstraction layer that can wrap any decentralized data technology that conforms to a dZeZ interface.
 
 ## How do you pronounce it?
 - You have a choice: Dee Zez (an homage to Zez Confrey) or Dee Zee Easy.
