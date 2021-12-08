@@ -1,7 +1,7 @@
 # dZeZ : thoughts about open source ZZ data structures for the decentralized internet
 
 ## Background
-Ted Nelson has patented and trademarked ZigZag(R)&trade; for development of his zippered-list constructs.  See https://xanadu.com/zigzag/ for more information.  dZeZ is an exploration of how ZZ data structures may be implemented as a data access layer in a decentralized web environment.
+Ted Nelson has patented and trademarked ZigZag&reg; for development of his zippered-list constructs.  See https://xanadu.com/zigzag/ for more information.  dZeZ is an exploration of how ZZ data structures may be implemented as a data access layer in a decentralized web environment.
 
 ## Definitions (provided by Ted Nelson):
 - zzspace is the arbitrary space of cells connectable
