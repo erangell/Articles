@@ -40,7 +40,7 @@ network connectivity via APIs
 - Users can either contribute their own storage and bandwidth resources to the network or participate in communities which pool resources and use smart contracts to enforce proper behavior of nodes which serve the community.  ( see https://playproject.io/ )
 - Ted Nelson's book: Literary Machines (https://en.wikipedia.org/wiki/Literary_Machines ) describes his vision for a docuverse where all connections between documents are available and visualized in various views.  Many of the conceptual structures described in that book can be upcycled. 
 - While the semantic web offers several data formats (ex: RDF, JSON-LD), zzstructures 
-should be available as another choice for applications.  Such structures can be implemented at different abstraction levels.  For example, a hyperdrive can use directories to implment tumbler addressing. ( see https://en.wikipedia.org/wiki/Tumbler_(Project_Xanadu) )
+should be available as another choice for applications.  Such structures can be implemented at different abstraction levels.  For example, a hyperdrive can use directories to implement tumbler addressing. ( see https://en.wikipedia.org/wiki/Tumbler_(Project_Xanadu) )
 - Enfilades ( see https://en.wikipedia.org/wiki/Enfilade_(Xanadu) ) can be used as indexing structures for hypercores or hyperdrives, and shared across the network.
 - Rich Links connect spans of content with a tagging system of user-defined types.  They use tumbler addressing, which can be extended into the dweb space.
 - Edit-decision-lists can be maintained by authors and readers, and fulfilled via peer-to-peer connections.
