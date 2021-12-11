@@ -1,0 +1,113 @@
+total 8
+drwxr-xr-x  6 ericrangell  staff  192 Dec 11 05:29 1111
+drwxr-xr-x  5 ericrangell  staff  160 Dec 11 06:16 2222
+drwxr-xr-x  2 ericrangell  staff   64 Dec  9 13:40 3333
+drwxr-xr-x  2 ericrangell  staff   64 Dec 11 06:07 4444
+-rw-r--r--@ 1 ericrangell  staff    0 Dec 11 07:06 ls-lR.txt
+-rw-r--r--@ 1 ericrangell  staff  212 Dec  9 19:51 readme.txt
+
+./1111:
+total 8
+drwxr-xr-x  6 ericrangell  staff  192 Dec 11 05:30 0
+drwxr-xr-x  9 ericrangell  staff  288 Dec 11 06:29 2
+-rw-r--r--@ 1 ericrangell  staff  538 Dec  9 21:13 readme.txt
+
+./1111/0:
+total 16
+drwxr-xr-x  5 ericrangell  staff  160 Dec  9 20:25 1
+-rw-r--r--@ 1 ericrangell  staff   65 Dec  9 20:24 1.json
+-rw-r--r--@ 1 ericrangell  staff  128 Dec  9 20:21 readme.txt
+
+./1111/0/1:
+total 24
+-rw-r--r--@ 1 ericrangell  staff   36 Dec  9 20:15 1.json
+-rw-r--r--@ 1 ericrangell  staff   31 Dec  9 20:15 2.json
+-rw-r--r--@ 1 ericrangell  staff  196 Dec  9 20:25 readme.txt
+
+./1111/2:
+total 16
+drwxr-xr-x  3 ericrangell  staff   96 Dec  9 20:30 0
+-rw-r--r--@ 1 ericrangell  staff   99 Dec 11 06:29 0.json
+drwxr-xr-x  3 ericrangell  staff   96 Dec  9 19:44 4
+drwxr-xr-x  7 ericrangell  staff  224 Dec  9 19:49 5
+drwxr-xr-x  3 ericrangell  staff   96 Dec  9 19:36 9
+-rw-r--r--@ 1 ericrangell  staff  722 Dec  9 20:38 readme.txt
+
+./1111/2/0:
+total 8
+-rw-r--r--  1 ericrangell  staff  65 Dec  9 20:30 1.json
+
+./1111/2/4:
+total 8
+-rw-r--r--  1 ericrangell  staff  119 Dec  9 13:43 1.md
+
+./1111/2/5:
+total 40
+-rw-r--r--  1 ericrangell  staff  2313 Dec  9 13:53 1.md
+-rw-r--r--@ 1 ericrangell  staff  2528 Dec  9 19:48 2.edl
+-rw-r--r--  1 ericrangell  staff  2528 Dec  9 19:48 3.edl
+-rwxr--r--  1 ericrangell  staff    56 Dec  9 19:45 cmpr.sh
+-rw-r--r--  1 ericrangell  staff   263 Dec  9 19:49 readme.txt
+
+./1111/2/9:
+total 16
+-rw-r--r--@ 1 ericrangell  staff  5393 Dec  9 13:49 1.md
+
+./2222:
+total 0
+drwxr-xr-x  10 ericrangell  staff  320 Dec 11 06:15 0
+drwxr-xr-x   6 ericrangell  staff  192 Dec 11 06:39 1
+
+./2222/0:
+total 32
+drwxr-xr-x  3 ericrangell  staff   96 Dec 11 05:41 1
+-rw-r--r--@ 1 ericrangell  staff  101 Dec 11 05:34 1.json
+drwxr-xr-x  6 ericrangell  staff  192 Dec 11 05:52 2
+-rw-r--r--@ 1 ericrangell  staff   65 Dec 11 05:34 2.json
+drwxr-xr-x  5 ericrangell  staff  160 Dec 11 06:17 3
+-rw-r--r--@ 1 ericrangell  staff   85 Dec 11 05:53 3.json
+-rw-r--r--@ 1 ericrangell  staff  511 Dec 11 05:54 readme.txt
+
+./2222/0/1:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  56 Dec 11 05:41 readme.txt
+
+./2222/0/2:
+total 24
+-rw-r--r--@ 1 ericrangell  staff   36 Dec  9 20:15 1.json
+-rw-r--r--@ 1 ericrangell  staff   31 Dec  9 20:15 2.json
+-rw-r--r--@ 1 ericrangell  staff  196 Dec  9 20:25 readme.txt
+
+./2222/0/3:
+total 8
+drwxr-xr-x  3 ericrangell  staff  96 Dec 11 06:20 1
+-rw-r--r--@ 1 ericrangell  staff  61 Dec 11 06:14 1.json
+
+./2222/0/3/1:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  17 Dec 11 06:20 1.json
+
+./2222/1:
+total 16
+drwxr-xr-x  5 ericrangell  staff  160 Dec 11 06:42 1
+-rw-r--r--@ 1 ericrangell  staff  112 Dec 11 06:33 1.json
+-rw-r--r--@ 1 ericrangell  staff  587 Dec 11 06:37 readme.txt
+
+./2222/1/1:
+total 16
+drwxr-xr-x  6 ericrangell  staff   192 Dec 11 07:04 1
+-rw-r--r--@ 1 ericrangell  staff  5393 Dec  9 13:49 1.md
+
+./2222/1/1/1:
+total 16
+drwxr-xr-x  3 ericrangell  staff    96 Dec 11 06:59 1
+-rw-r--r--@ 1 ericrangell  staff   107 Dec 11 07:04 1.json
+-rw-r--r--@ 1 ericrangell  staff  1024 Dec 11 07:03 readme.txt
+
+./2222/1/1/1/1:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  166 Dec 11 06:51 1.txt
+
+./3333:
+
+./4444:
