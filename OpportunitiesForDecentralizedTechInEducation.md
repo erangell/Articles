@@ -40,7 +40,7 @@ Let's take a deeper dive into the advantages of decentralized web technologies.
  
 * Offline Rich Content Experiences
 
-  Decentralized protocols are agnostic to the transport layer, so Internet connectivity is not a requirement for applications to run.  Data synchronization operates on a policy of eventual consistency, and conflict-free replicated data types ([CRDTs](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)) are used when possible.  The student experience can include downloading of class content for offline review.  Students can make editable copies of this content and edit it for their purposes on their local machines.  To see an example of such an experience, visit: the following site in Beaker Browser: **dat://datbeakerroadmapnotes2018oct14.hashbase.io/**
+  Decentralized protocols are agnostic to the transport layer, so Internet connectivity is not a requirement for applications to run.  Data synchronization operates on a policy of eventual consistency, and conflict-free replicated data types ([CRDTs](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)) are used when possible.  The student experience can include downloading of class content for offline review.  Students can make editable copies of this content and edit it for their purposes on their local machines.  To see an example of such an experience, visit: the following site in Beaker Browser: **hyper://7db4ecd006552589f8092e2f40e8f96ee43fc6f722ed2796aa96eb87bde29356/**
   
 
 * Automatic Versioning
