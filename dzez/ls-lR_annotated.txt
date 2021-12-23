@@ -1,0 +1,353 @@
+total 24
+drwxr-xr-x  6 ericrangell  staff   192 Dec 11 05:29 1111
+drwxr-xr-x  5 ericrangell  staff   160 Dec 11 06:16 2222
+drwxr-xr-x  3 ericrangell  staff    96 Dec 11 07:28 3333
+drwxr-xr-x  3 ericrangell  staff    96 Dec 22 20:03 4444
+-rw-r--r--@ 1 ericrangell  staff     0 Dec 22 20:05 ls-lR.txt
+
+Recursive listing of this directory created by refresh.sh
+
+-rw-r--r--@ 1 ericrangell  staff  3644 Dec 22 19:58 ls-lR_annotated.txt
+
+Edited version of recursive directory listing with contents of files included
+
+-rw-r--r--@ 1 ericrangell  staff   212 Dec  9 19:51 readme.txt
+
+Each of these directories represents the address of a hypothetical hyperdrive.
+1111 = owned by the document author
+2222 = owned by first person to provide feedback
+3333 = owned by 2nd person to provide feedback
+4444 = owned by 3rd person to provide feedback
+
+-rwxr--r--  1 ericrangell  staff    53 Dec 22 20:05 refresh.sh
+
+Shell script for recreating ls-lR.txt and overwriting annotated version 
+(save previous version before running)
+
+./1111:
+total 8
+drwxr-xr-x  6 ericrangell  staff  192 Dec 11 05:30 0
+drwxr-xr-x  9 ericrangell  staff  288 Dec 11 06:29 2
+-rw-r--r--@ 1 ericrangell  staff  538 Dec  9 21:13 readme.txt
+
+Each directory at this level represents all activity for a single document.
+2 represents the 2nd article written by this author.
+The import of the contents into this hyperdrive is a transclusion of the source document.
+The transclusion should be represented as a rich link: 
+1. The tumbler of the creator of the link: 1111/0
+2. The tumbler of the source : 1111/2/0/1 = URL of github document
+3. The tumbler of the target : 1111/2 = tumbler containing all versions
+4. The tumbler of the type of link : 1111/0/1/1 = transclusion link type
+
+./1111/0:
+total 16
+drwxr-xr-x  5 ericrangell  staff  160 Dec  9 20:25 1
+-rw-r--r--@ 1 ericrangell  staff   65 Dec  9 20:24 1.json
+
+{"dimname":"d.linktype"
+,"dimdesc":"A rank of Rich Link Types"
+}
+
+-rw-r--r--@ 1 ericrangell  staff  128 Dec  9 20:21 readme.txt
+
+Each numbered directory defines a dimension.
+The json files in this directory provide metadata for the corresponding dimension.
+
+./1111/0/1:
+total 24
+-rw-r--r--@ 1 ericrangell  staff   36 Dec  9 20:15 1.json
+
+{"value":"transclusion"
+,"prev":0
+}
+
+-rw-r--r--@ 1 ericrangell  staff   31 Dec  9 20:15 2.json
+
+{"value":"comment"
+,"prev":1
+}
+
+-rw-r--r--@ 1 ericrangell  staff  196 Dec  9 20:25 readme.txt
+
+The following json files define Rich Link Types:
+1 = transclusion
+2 = comment
+
+The "prev" pointers maintain a linked list that can be followed to the head of each rank (the cell where prev = 0).
+
+./1111/2:
+total 16
+drwxr-xr-x  3 ericrangell  staff   96 Dec  9 20:30 0
+-rw-r--r--@ 1 ericrangell  staff   99 Dec 11 06:29 0.json
+
+{"richlink":"1111/2/0"
+,"home":"1111/0"
+,"from":"1111/2/0/1"
+,"to":"1111/2"
+,"type":"1111/0/1/1"
+}
+
+drwxr-xr-x  3 ericrangell  staff   96 Dec  9 19:44 4
+drwxr-xr-x  7 ericrangell  staff  224 Dec  9 19:49 5
+drwxr-xr-x  3 ericrangell  staff   96 Dec  9 19:36 9
+-rw-r--r--@ 1 ericrangell  staff  722 Dec  9 20:38 readme.txt
+
+When there is both a numbered file and a numbered directory, the tumbler refers to the numbered file (ex: 0.json).  Tumblers at lower levels refer to subdirectories of the numbered directory (ex: 0/1, 0/2)
+
+0.json is a rich link structure which indicates that the document in directory 2 is a transclusion from a github URL.
+The subdirectory 0 has file 1.json which contains the source URL.
+
+The other directories (4, 5, and 9) refer to versions of the document.
+They were named arbitrarily following this convention:
+4 = 4th commit to the github repo = initial creation of the document
+5 = 5th commit to the github repo = first revision of the document
+9 = 9th commit = first revision that was distributed for comments.
+
+./1111/2/0:
+total 8
+-rw-r--r--  1 ericrangell  staff  65 Dec  9 20:30 1.json
+
+{"https":"https://github.com/erangell/Articles/dzezthoughts.md"}
+
+./1111/2/4:
+total 8
+-rw-r--r--  1 ericrangell  staff  119 Dec  9 13:43 1.md
+
+Contains first version of the article where I was just testing markdown
+
+./1111/2/5:
+total 40
+-rw-r--r--  1 ericrangell  staff  2313 Dec  9 13:53 1.md
+
+Contains 2nd version of the article with initial thoughts before they are fleshed out
+
+-rw-r--r--@ 1 ericrangell  staff  2528 Dec  9 19:48 2.edl
+
+EDL (Edit-decision-list) is a currently undefined structure based on Ted Nelson's ideas.
+It is essentially the instructions for creating a version of a document from spans of content.
+For now, the output of a diff is being used as an EDL.
+This file was created from the following line of cmpr.sh
+diff ../4/1.md 1.md > 2.edl
+It represents a "forward delta" which could reconstruct version 2 given version 1
+
+-rw-r--r--  1 ericrangell  staff  2528 Dec  9 19:48 3.edl
+
+This file was created from the following line of cmpr.sh
+diff 1.md ../4/1.md > 3.edl
+It represents a "reverse delta" which could reconstruct version 1 given version 2
+
+-rwxr--r--  1 ericrangell  staff    56 Dec  9 19:45 cmpr.sh
+
+The shell script that generates the forward delta and reverse delta EDL files.
+
+-rw-r--r--  1 ericrangell  staff   263 Dec  9 19:49 readme.txt
+
+Conventions:
+cmpr.sh is a shell script that generates forward and reverse delta diffs
+1.md  = transclusion of current document version
+2.edl = diff for creating current version from previous version
+3.edl = diff for creating previous version from current version
+
+./1111/2/9:
+total 16
+-rw-r--r--@ 1 ericrangell  staff  5393 Dec  9 13:49 1.md
+
+Contains the first version of the article distributed for comments
+
+./2222:
+total 0
+drwxr-xr-x  10 ericrangell  staff  320 Dec 11 06:15 0
+drwxr-xr-x   6 ericrangell  staff  192 Dec 11 06:39 1
+
+./2222/0:
+total 32
+drwxr-xr-x  3 ericrangell  staff   96 Dec 11 05:41 1
+-rw-r--r--@ 1 ericrangell  staff  101 Dec 11 05:34 1.json
+
+{"dimname": "d.mystuff"
+ "dimdesc":"test case of someone using a different tumbler for link types"
+}
+
+drwxr-xr-x  6 ericrangell  staff  192 Dec 11 05:52 2
+-rw-r--r--@ 1 ericrangell  staff   65 Dec 11 05:34 2.json
+
+{"dimname":"d.linktype"
+,"dimdesc":"A rank of Rich Link Types"
+}
+
+drwxr-xr-x  5 ericrangell  staff  160 Dec 11 06:17 3
+-rw-r--r--@ 1 ericrangell  staff   85 Dec 11 05:53 3.json
+
+{"dimname":"d.correspondence"
+,"dimdesc":"Feedback given to people who request it"
+}
+
+-rw-r--r--@ 1 ericrangell  staff  511 Dec 11 05:54 readme.txt
+
+Each numbered directory defines a dimension.
+The json files in this directory provide metadata for the corresponding dimension.
+For this user
+1 = d.mystuff
+2 = d.linktype
+3 = d.correspondence
+
+Tumblers:
+0/1 = 1.json containing "dimname": "d.mystuff"
+0/1/n = json files in 2222/0/1: cells created whose first link is on d.mystuff
+0/2 = 2.json containing "dimname":"d.linktype"
+0/2/1 = 1.json in 2222/0/2 containing zzcell: "value":"transclusion"
+0/2/2 = 2.json in 2222/0/2 containing zzcell: "value":"comment"
+
+./2222/0/1:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  56 Dec 11 05:41 readme.txt
+
+This directory contains user 2222's public zzstructures
+
+./2222/0/2:
+total 24
+-rw-r--r--@ 1 ericrangell  staff   36 Dec  9 20:15 1.json
+
+{"value":"transclusion"
+,"prev":0
+}
+
+-rw-r--r--@ 1 ericrangell  staff   31 Dec  9 20:15 2.json
+
+{"value":"comment"
+,"prev":1
+}
+
+-rw-r--r--@ 1 ericrangell  staff  196 Dec  9 20:25 readme.txt
+
+The following json files define Rich Link Types:
+1 = transclusion
+2 = comment
+
+The "prev" pointers maintain a linked list that can be followed to the head of each rank (the cell where prev = 0).
+
+./2222/0/3:
+total 8
+drwxr-xr-x  3 ericrangell  staff  96 Dec 11 06:20 1
+-rw-r--r--@ 1 ericrangell  staff  61 Dec 11 06:14 1.json
+
+{"value":"Comments on version 9 of 1111's paper"
+,"prev":0
+}
+
+./2222/0/3/1:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  17 Dec 11 06:20 1.json
+
+{"richlink":""
+}
+
+This notation just indicates that some type of richlink would be at this location,
+perhaps pointing to an email, or a file with a transcluded copy of an email.
+
+./2222/1:
+total 16
+drwxr-xr-x  5 ericrangell  staff  160 Dec 11 06:42 1
+-rw-r--r--@ 1 ericrangell  staff  112 Dec 11 06:33 1.json
+
+{"richlink":"2222/1/1"
+,"home":"2222/0"
+,"from":"1111/2/9/1/0"
+,"to":"1111/2/9/1/5393"
+,"type":"2222/0/2/1"
+}
+
+-rw-r--r--@ 1 ericrangell  staff  587 Dec 11 06:37 readme.txt
+
+This directory is user 2222's personal transclusion of 1111's article.  1.json has the EDL for the full transclusion of version 9 of the article.
+
+"richlink":"2222/1/1" = the tumbler for this rich link (points to this 1.json)
+,"home":"2222/0" = the tumbler for the dimension list of this user/hyperdrive
+,"from":"1111/2/9/1/0" = the starting point of the transclusion = first byte of 1111's document
+,"to":"1111/2/9/1/5393" = the ending point of the transclusion = last byte of 1111's document
+,"type":"2222/0/2/1" = zzcell that has the type of this rich link:	{"value":"transclusion",
+
+Note: the mechanism for identifying byte ranges of a file is open for comments.
+With the notation above, if there do not exist subdirectories named "0" or "5393"
+The tumbler can be interpreted as a byte position.
+An alternative can be to have both "from" and "to" point to "1111/2/9/1" which would 
+indicate the entire contents of the 1.md file in 1111/2/9.
+
+./2222/1/1:
+total 16
+drwxr-xr-x  6 ericrangell  staff   192 Dec 11 07:04 1
+-rw-r--r--@ 1 ericrangell  staff  5393 Dec  9 13:49 1.md
+
+2222's local copy of version 9 of 1111's article (for offline use)
+It will not be used by anyone else because the richlink identifies the tumbler 2222/1/1 
+as a transclusion of the original article.  This implies ignoring any subdirectories
+of that tumbler.  So the user can change their local copy as much as they want.
+They can add files and subdirectories as desired.
+If they share their version it will have a tumbler of 2222/1/1/1
+The original transclusion richlink remains immutable.
+
+./2222/1/1/1:
+total 16
+drwxr-xr-x  3 ericrangell  staff    96 Dec 11 06:59 1
+-rw-r--r--@ 1 ericrangell  staff   107 Dec 11 07:04 1.json
+
+{"richlink":"2222/1/1"
+,"home":"2222/0"
+,"from":"1111/2/9/1/0"
+,"to":"1111/2/9/1/5393"
+,"type":"2222/0/2/1"
+}
+
+-rw-r--r--@ 1 ericrangell  staff  1024 Dec 11 07:03 readme.txt
+
+In this directory, the commenter (2222) wishes to comment on the following line of 1111's article:
+
+( see https://eprints.soton.ac.uk/259230/1/mSpace_zzStructures.pdf  )
+
+in 2222's version, they wish to replace the above line with the following:
+
+( see https://xanadu.com/zigzag )
+
+The author (1111) doesn't agree with this change and will reject any pull request from 2222 to make the change.  However, 2222 can make that change to their personal transcluded copy of the article and essentially create their own fork, which future readers will know is a transclusion of 1111's article and be able to follow the rich link back to version 9 of 1111's hyperdrive.
+
+1.json contains the comment link:
+{"richlink":"2222/1/1/1/1/1" = the tumbler for this link
+"home":"2222/0" = user 2222
+"from":"1111/9/1/100" = the beginning byte of the transcluded text (simulated - not accurate)
+"to":"1111/9/1/200" = the ending byte of the transcluded text (simulated - not accurate)
+"type":"2222/0/2/2" = link type = "comment"
+}
+
+./2222/1/1/1/1:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  166 Dec 11 06:51 1.txt
+
+Please replace this link:
+
+( see https://eprints.soton.ac.uk/259230/1/mSpace_zzStructures.pdf  )
+
+with the following:
+
+( see https://xanadu.com/zigzag )
+
+./3333:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  859 Dec 11 07:28 readme.txt
+
+Here is a public link to comments on the article on hypothes.is
+
+https://via.hypothes.is/https://github.com/erangell/Articles/blob/master/dzezthoughts.md
+
+If we wish to bring these comments into our hyperdrive, we would create a transclusion that points back to the hypothes.is url.  Then we would create comment links pointing to the text in the version of the document being commented on.  Import utilities would be applications that operate on dZeZ structures.
+
+The importance of a common decentralized data layer is to provide portability of user data.  If hypothes.is had issues and people wished to take their data to another service, then a person who had imported it into a standard decentralized data structure would have their copy of the work available, as well as stored locally (a transclusion makes a local copy for personal/offline reference).
+
+./4444:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  218 Dec 22 20:03 readme.txt
+
+Additional comments on the article are being tracked in this GitHub issue:
+
+https://github.com/erangell/Articles/issues/8
+
+The comments were received in private messages on Mattermost, then curated for public posting.

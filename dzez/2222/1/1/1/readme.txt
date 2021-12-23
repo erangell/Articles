@@ -4,7 +4,7 @@ In this directory, the commenter (2222) wishes to comment on the following line 
 
 in 2222's version, they wish to replace the above line with the following:
 
-( see https://www https://xanadu.com/zigzag )
+( see https://xanadu.com/zigzag )
 
 The author (1111) doesn't agree with this change and will reject any pull request from 2222 to make the change.  However, 2222 can make that change to their personal transcluded copy of the article and essentially create their own fork, which future readers will know is a transclusion of 1111's article and be able to follow the rich link back to version 9 of 1111's hyperdrive.
 

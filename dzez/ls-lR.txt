@@ -1,10 +1,12 @@
-total 8
-drwxr-xr-x  6 ericrangell  staff  192 Dec 11 05:29 1111
-drwxr-xr-x  5 ericrangell  staff  160 Dec 11 06:16 2222
-drwxr-xr-x  2 ericrangell  staff   64 Dec  9 13:40 3333
-drwxr-xr-x  2 ericrangell  staff   64 Dec 11 06:07 4444
--rw-r--r--@ 1 ericrangell  staff    0 Dec 11 07:06 ls-lR.txt
--rw-r--r--@ 1 ericrangell  staff  212 Dec  9 19:51 readme.txt
+total 24
+drwxr-xr-x  6 ericrangell  staff   192 Dec 11 05:29 1111
+drwxr-xr-x  5 ericrangell  staff   160 Dec 11 06:16 2222
+drwxr-xr-x  3 ericrangell  staff    96 Dec 11 07:28 3333
+drwxr-xr-x  3 ericrangell  staff    96 Dec 22 20:03 4444
+-rw-r--r--@ 1 ericrangell  staff     0 Dec 22 20:05 ls-lR.txt
+-rw-r--r--@ 1 ericrangell  staff  3644 Dec 22 19:58 ls-lR_annotated.txt
+-rw-r--r--@ 1 ericrangell  staff   212 Dec  9 19:51 readme.txt
+-rwxr--r--  1 ericrangell  staff    53 Dec 22 20:05 refresh.sh
 
 ./1111:
 total 8
@@ -109,5 +111,9 @@ total 8
 -rw-r--r--@ 1 ericrangell  staff  166 Dec 11 06:51 1.txt
 
 ./3333:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  859 Dec 11 07:28 readme.txt
 
 ./4444:
+total 8
+-rw-r--r--@ 1 ericrangell  staff  218 Dec 22 20:03 readme.txt
